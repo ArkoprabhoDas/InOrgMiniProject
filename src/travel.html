@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="Travel.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body style="background-color: black;">
+    <nav style="background-color: red;height: 100px;">
+        <h2 style="color: white;">TravelPlanner</h2>
+        <ul class="navbar">
+            <li><a href="travel.html" class="active"></a>Travel</li>
+            <li>Accomodation</li>
+            <li>Activities</li>
+        </ul>
+    </nav>
+    <h4 style="color: white;">Make a wonderful plan for your family, partner, friends, or even for yourself!!!!!!!!!</h4>
+    <form id="bookingForm">
+        <input type="radio" id="roundWay" name="flightType" value="roundWay" checked>
+        <label for="roundWay" style="color: white;">Round Way</label><br>
+        <input type="radio" id="oneWay" name="flightType" value="oneWay">
+        <label for="oneWay"style="color:white;">One Way</label><br><br>
+    </form>
+      
+    <div id="roundWayContent" class="content active">
+        <!-- Content for Round Way option -->
+        <p style="color: white;">Round Way: Select departure and return dates.</p>
+        <div class="container">
+            <div class="input-group">
+                <label for="from" style="color: white;">From:</label>
+                <div class="dropdown">
+                    <button class="button dropbtn">Select City</button>
+                    <div class="dropdown-content">
+                        <a href="#">City 1</a>
+                        <a href="#">City 2</a>
+                        <a href="#">City 3</a>
+                        <!-- Add more cities as needed -->
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="to" style="color: white;">To:</label>
+                <div class="dropdown">
+                    <button class="button dropbtn">Select City</button>
+                    <div class="dropdown-content">
+                        <a href="#">City 1</a>
+                        <a href="#">City 2</a>
+                        <a href="#">City 3</a>
+                        <!-- Add more cities as needed -->
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="noOfPeople" style="color: white;">No. of people:</label>
+                <div class="dropdown">
+                    <button class="button dropbtn">Select</button>
+                    <div class="dropdown-content">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <!-- Add more options as needed -->
+                    </div>
+                </div>
+            <div class="input-group">
+                <label for="startDate"style="color:white;">Start Date:</label>
+                <input type="date" id="startDate">
+            </div>
+            <div class="input-group">
+                <label for="endDate" style="color: white;">End Date:</label>
+                <input type="date" id="endDate">
+            </div>
+            <button class="button">Search</button>
+        </div>
+    </div>
+            <br>
+            <br>
+            <div class="input-group">
+                <label style="color: white;">Mode of Transportation:</label><br>
+                <br>
+                <input type="radio" id="flight" name="transportation" value="flight" checked>
+                <label for="flight" style="color: white;">Flight</label>
+                <input type="radio" id="railway" name="transportation" value="railway">
+                <label for="railway" style="color: white;">Railway</label>
+                <input type="radio" id="bus" name="transportation" value="bus">
+                <label for="bus" style="color: white;">Bus</label>
+                <input type="radio" id="taxi" name="transportation" value="taxi">
+                <label for="taxi" style="color: white;">Taxi</label>
+            </div>
+            <div class="transport-content">
+                <div id="flightOption" class="transport-option active">
+                    <!-- Content for Flight option -->
+                    <p style="color: white;">Flight: Book your flight tickets.</p>
+                    <div class="container">
+                        <div class="input-group">
+                            <label for="from" style="color: white;">From:</label>
+                            <div class="dropdown">
+                                <button class="button dropbtn">Select City</button>
+                                <div class="dropdown-content">
+                                    <a href="#">City 1</a>
+                                    <a href="#">City 2</a>
+                                    <a href="#">City 3</a>
+                                    <!-- Add more cities as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="to" style="color: white;">To:</label>
+                            <div class="dropdown">
+                                <button class="button dropbtn">Select City</button>
+                                <div class="dropdown-content">
+                                    <a href="#">City 1</a>
+                                    <a href="#">City 2</a>
+                                    <a href="#">City 3</a>
+                                    <!-- Add more cities as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="noOfPeople" style="color: white;">No. of people:</label>
+                            <div class="dropdown">
+                                <button class="button dropbtn">Select</button>
+                                <div class="dropdown-content">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">7</a>
+                                    <a href="#">8</a>
+                                    <a href="#">9</a>
+                                    <!-- Add more options as needed -->
+                                </div>
+                            </div>
+                        <div class="input-group">
+                            <label for="startDate"style="color:white;">Start Date:</label>
+                            <input type="date" id="startDate">
+                        </div>
+                        <div class="input-group">
+                            <label for="endDate" style="color: white;">End Date:</label>
+                            <input type="date" id="endDate">
+                        </div>
+                        <div class="input-group">
+                            <label for="noOfPeople" style="color: white;">Seats type</label>
+                            <div class="dropdown">
+                                <button class="button dropbtn">Select</button>
+                                <div class="dropdown-content">
+                                    <a href="#">economy</a>
+                                    <a href="#">premium</a>
+                                    <a href="#">business class</a>
+                                    <a href="#">first class</a>
+                
+                                    <!-- Add more options as needed -->
+                                </div>
+                            </div>
+                        <button class="button">Search</button>
+                    </div>
+                </div>
+                </div>
+                <div id="railwayOption" class="transport-option">
+                    <!-- Content for Railway option -->
+                    <p style="color: white;">Railway: Book your train tickets.</p>
+                    <div class="container">
+                        <div class="input-group">
+                            <label for="from" style="color: white;">From:</label>
+                            <div class="dropdown">
+                                <button class="button dropbtn">Select City</button>
+                                <div class="dropdown-content">
+                                    <a href="#">City 1</a>
+                                    <a href="#">City 2</a>
+                                    <a href="#">City 3</a>
+                                    <!-- Add more cities as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="to" style="color: white;">To:</label>
+                            <div class="dropdown">
+                                <button class="button dropbtn">Select City</button>
+                                <div class="dropdown-content">
+                                    <a href="#">City 1</a>
+                                    <a href="#">City 2</a>
+                                    <a href="#">City 3</a>
+                                    <!-- Add more cities as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="noOfPeople" style="color: white;">No. of people:</label>
+                            <div class="dropdown">
+                                <button class="button dropbtn">Select</button>
+                                <div class="dropdown-content">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">7</a>
+                                    <a href="#">8</a>
+                                    <a href="#">9</a>
+                                    <!-- Add more options as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="startDate"style="color:white;">Start Date:</label>
+                            <input type="date" id="startDate">
+                        </div>
+                        <div class="input-group">
+                            <label for="endDate" style="color: white;">End Date:</label>
+                            <input type="date" id="endDate">
+                        </div>
+                        <div class="input-group">
+                            <label for="noOfPeople" style="color: white;">Seats type</label>
+                            <div class="dropdown">
+                                <button class="button dropbtn">Select</button>
+                                <div class="dropdown-content">
+                                    <a href="#">economy</a>
+                                    <a href="#">premium</a>
+                                    <a href="#">business class</a>
+                                    <a href="#">first class</a>
+                
+                                    <!-- Add more options as needed -->
+                                </div>
+                            </div>
+                            </div>
+                        <button class="button">Search</button>
+                    </div>
+                </div>
+                <div id="busOption" class="transport-option">
+                    <!-- Content for Bus option -->
+                    <p style="color: white;">Bus: Book your bus tickets.</p>
+                </div>
+                <div id="taxiOption" class="transport-option">
+                    <!-- Content for Taxi option -->
+                    <p style="color: white;">Taxi: Book your taxi ride.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    </div>
+      
+    <div id="oneWayContent" class="content">
+        <!-- Content for One Way option -->
+        <p style="color: white;">One Way: Select departure date.</p>
+        <div class="container">
+            <div class="input-group">
+                <label for="from" style="color: white;">From:</label>
+                <div class="dropdown">
+                    <button class="button dropbtn">Select City</button>
+                    <div class="dropdown-content">
+                        <a href="#">City 1</a>
+                        <a href="#">City 2</a>
+                        <a href="#">City 3</a>
+                        <!-- Add more cities as needed -->
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="to" style="color: white;">To:</label>
+                <div class="dropdown">
+                    <button class="button dropbtn">Select City</button>
+                    <div class="dropdown-content">
+                        <a href="#">City 1</a>
+                        <a href="#">City 2</a>
+                        <a href="#">City 3</a>
+                        <!-- Add more cities as needed -->
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="noOfPeople" style="color: white;">No. of people:</label>
+                <div class="dropdown">
+                    <button class="button dropbtn">Select</button>
+                    <div class="dropdown-content">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <!-- Add more options as needed -->
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="startDate" style="color:white;">Start Date:</label>
+                    <input type="date" id="startDate">
+                </div>
+                <button class="button">Search</button>
+            </div>
+        </div>
+                <br>
+                <br>
+                <div class="input-group">
+                    <label style="color: white;">Mode of Transportation:</label><br>
+                    <br>
+                    <input type="radio" id="flight" name="transportation" value="flight" checked>
+                    <label for="flight" style="color: white;">Flight</label>
+                    <input type="radio" id="railway" name="transportation" value="railway">
+                    <label for="railway" style="color: white;">Railway</label>
+                    <input type="radio" id="bus" name="transportation" value="bus">
+                    <label for="bus" style="color: white;">Bus</label>
+                    <input type="radio" id="taxi" name="transportation" value="taxi">
+                    <label for="taxi" style="color: white;">Taxi</label>
+                </div>
+                <div class="transport-content">
+                    <div id="flightOption" class="transport-option active">
+                        <!-- Content for Flight option -->
+                        <p style="color: white;">Flight: Book your flight tickets.</p>
+                        <div class="container">
+                            <div class="input-group">
+                                <label for="from" style="color: white;">From:</label>
+                                <div class="dropdown">
+                                    <button class="button dropbtn">Select City</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">City 1</a>
+                                        <a href="#">City 2</a>
+                                        <a href="#">City 3</a>
+                                        <!-- Add more cities as needed -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="to" style="color: white;">To:</label>
+                                <div class="dropdown">
+                                    <button class="button dropbtn">Select City</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">City 1</a>
+                                        <a href="#">City 2</a>
+                                        <a href="#">City 3</a>
+                                        <!-- Add more cities as needed -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="noOfPeople" style="color: white;">No. of people:</label>
+                                <div class="dropdown">
+                                    <button class="button dropbtn">Select</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">1</a>
+                                        <a href="#">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <a href="#">5</a>
+                                        <a href="#">6</a>
+                                        <a href="#">7</a>
+                                        <a href="#">8</a>
+                                        <a href="#">9</a>
+                                        <!-- Add more options as needed -->
+                                    </div>
+                                </div>
+                            <div class="input-group">
+                                <label for="startDate"style="color:white;">Start Date:</label>
+                                <input type="date" id="startDate">
+                            </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="noOfPeople" style="color: white;">Seats type</label>
+                                <div class="dropdown">
+                                    <button class="button dropbtn">Select</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">economy</a>
+                                        <a href="#">premium</a>
+                                        <a href="#">business class</a>
+                                        <a href="#">first class</a>
+                    
+                                        <!-- Add more options as needed -->
+                                    </div>
+                                </div>
+                            <button class="button">Search</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div id="railwayOption" class="transport-option">
+                        <!-- Content for Railway option -->
+                        <p style="color: white;">Railway: Book your train tickets.</p>
+                    </div>
+                    <div id="busOption" class="transport-option">
+                        <!-- Content for Bus option -->
+                        <p style="color: white;">Bus: Book your bus tickets.</p>
+                    </div>
+                    <div id="taxiOption" class="transport-option">
+                        <!-- Content for Taxi option -->
+                        <p style="color: white;">Taxi: Book your taxi ride.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+         
+    <br><br><br>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
